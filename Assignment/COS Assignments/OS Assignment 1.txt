@@ -1,0 +1,222 @@
+CDAC MUMBAI
+CONCEPTS OF OPERATING SYSTEM
+ASSIGNMENT 1
+
+
+PROBLEM 1: READ THE INSTRUCTIONS CAREFULLY AND ANSWER ACCORDINGLY. IF THERE IS
+ANY NEED TO INSERT SOME DATA THEN DO THAT AS WELL. 
+
+
+Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a
+directory named "LinuxAssignment" if it exists; otherwise, create it. 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~$ ls
+'CDAC PG-DAC'   Documents   Music      Public      Videos
+ Desktop        Downloads   Pictures   Templates
+shubham@shubham-Lenovo-E41-15:~$ mkdir LinuxAssignment
+shubham@shubham-Lenovo-E41-15:~$ ls
+'CDAC PG-DAC'   Documents   LinuxAssignment   Pictures   Templates
+ Desktop        Downloads   Music             Public     Videos
+shubham@shubham-Lenovo-E41-15:~$ 
+
+
+File Management:
+a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its
+contents. 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~$ cd LinuxAssignment
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ touch file1.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ cat file1.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ 
+
+Directory Management:
+a. Create a new directory named "docs" inside the "LinuxAssignment" directory. 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ mkdir docs
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ ls
+docs  file1.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ 
+
+
+Networking:
+a. Display the IP address of the system.
+b. Ping a remote server to check connectivity (provide a remote server address to ping)
+
+answer:
+shubham@shubham-Lenovo-E41-15:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 98:29:a6:50:96:e3 brd ff:ff:ff:ff:ff:ff
+3: wlp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether b0:fc:36:37:e5:17 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.6/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp2s0
+       valid_lft 82689sec preferred_lft 82689sec
+    inet6 2401:4900:1c44:ae1:fc5f:e6c8:867e:dd5c/64 scope global temporary dynamic 
+       valid_lft 55155sec preferred_lft 39248sec
+    inet6 2401:4900:1c44:ae1:417c:b579:eee3:5bea/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 55155sec preferred_lft 55155sec
+    inet6 fe80::baa7:f70e:8644:74a6/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+
+Copy and Move Files:
+a. Copy the "file1.txt" file into the "docs" directory and rename it to "file2.txt". 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ cp file1.txt /home/shubham/LinuxAssignment/docs
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ cd docs
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ ls
+file1.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ mv file1.txt file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ ls
+file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ 
+
+
+Permissions and Ownership:
+a. Change the permissions of "file2.txt" to allow read, write, and execute permissions for
+the owner and only read permissions for others. Then, change the owner of "file2.txt" to
+the current user. 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ chmod 744 file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ ls -lha
+total 8.0K
+drwxrwxr-x 2 shubham shubham 4.0K Aug 28 19:46 .
+drwxrwxr-x 3 shubham shubham 4.0K Aug 28 19:36 ..
+-rwxr--r-- 1 shubham shubham    0 Aug 28 19:44 file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ chown shubham file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ ls -lha
+total 8.0K
+drwxrwxr-x 2 shubham shubham 4.0K Aug 28 19:46 .
+drwxrwxr-x 3 shubham shubham 4.0K Aug 28 19:36 ..
+-rwxr--r-- 1 shubham shubham    0 Aug 28 19:44 file2.txt
+
+
+Final Checklist:
+a. Finally, list the contents of the "LinuxAssignment" directory and the root directory to
+ensure that all operations were performed correctly. 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ ls -lh
+total 4.0K
+drwxrwxr-x 2 shubham shubham 4.0K Aug 28 19:46 docs
+-rw-rw-r-- 1 shubham shubham    0 Aug 28 19:34 file1.txt
+
+
+File Searching:
+a. Search for all files with the extension ".txt" in the current directory and its subdirectories.
+b. Display lines containing a specific word in a file (provide a file name and the specific
+word to search)
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ find . -type f -name "*.txt"
+./file1.txt
+./docs/file2.txt
+
+
+System Information:
+a. Display the current system date and time. 
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ date
+Wednesday 28 August 2024 08:51:12 PM IST
+
+
+File Compression:
+a. Compress the "docs" directory into a zip file.
+b. Extract the contents of the zip file into a new directory.
+
+answer:
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ zip -r docs.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ mkdir docs2
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ ls
+docs  docs2  docs.zip  file1.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ unzip docs.zip -d docs2
+Archive:  docs.zip
+   creating: docs2/docs/
+ extracting: docs2/docs/file2.txt    
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment$ ls
+docs  docs2  docs.zip  file1.txt
+
+
+File Editing:
+a. Open the "file1.txt" file in a text editor and add some text to it.
+b. Replace a specific word in the "file1.txt" file with another word (provide the original
+word and the word to replace it with). 
+
+answer:
+
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ ls
+file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ sed -i 's/hello/hii/g' file2.txt
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ cat file2.txt
+hii
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+shubham@shubham-Lenovo-E41-15:~/LinuxAssignment/docs$ 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PROBLEM 2: READ THE INSTRUCTIONS CAREFULLY AND ANSWER ACCORDINGLY. IF THERE IS
+ANY NEED TO INSERT SOME DATA THEN DO THAT AS WELL.
+ 
+
+a. Suppose you have a file named "data.txt" containing important information. Display the
+first 10 lines of this file to quickly glance at its contents using a command. 
+
+answer: head data.txt
+
+b. Now, to check the end of the file for any recent additions, display the last 5 lines of
+"data.txt" using another command. 
+
+answer: tail -n 5 data.txt
+
+c. In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of
+this file to analyze the initial data set. 
+
+answer: head -n 15 numbers.txt
+
+d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt"
+
+answer: tail -n 3 numbers.txt
+
+e. Imagine you have a file named "input.txt" with text content. Use a command to translate
+all lowercase letters to uppercase in "input.txt" and save the modified text in a new file
+named "output.txt." 
+
+answer:tr 'a-z' 'A-Z' <input.txt> output.txt
+
+f. In a file named "duplicate.txt," there are several lines of text, some of which are
+duplicates. Use a command to display only the unique lines from "duplicate.txt." 
+
+answer: uniq duplicate.txt
+
+g. In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a
+command to display each unique fruit along with the count of its occurrences in
+"fruit.txt." 
+
+answer: sort fruit.txt | uniq -c
+
+
+
+
+
