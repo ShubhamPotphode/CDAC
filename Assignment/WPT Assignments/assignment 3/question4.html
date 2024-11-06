@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Bold Text on Hover</title>
+    <style>
+        .hover-link {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .paragraph {
+            font-size: 18px;
+        }
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="hover-link" 
+       onmouseover="highlightBoldText()" 
+       onmouseout="removeHighlight()">
+        [On mouse hover here bold words of the following paragraph will be highlighted]
+    </p>
+
+    <p class="paragraph">
+        We have just started <b>this</b> section for the users (<b>beginner</b> to intermediate) who 
+        want to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to 
+        <b>test</b> their JavaScript <b>skill</b>.
+    </p>
+
+    <script>
+        function highlightBoldText() {
+            const boldWords = document.querySelectorAll('.paragraph b');
+            boldWords.forEach(word => {
+                word.classList.add('highlight');
+            });
+        }
+
+        function removeHighlight() {
+            const boldWords = document.querySelectorAll('.paragraph b');
+            boldWords.forEach(word => {
+                word.classList.remove('highlight');
+            });
+        }
+    </script>
+
+</body>
+</html>

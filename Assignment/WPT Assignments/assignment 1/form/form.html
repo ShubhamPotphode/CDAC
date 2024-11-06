@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form class="registration-form">
+            <h1>Registration Form</h1>
+            <table>
+                <tr>
+                    <td><label>Date of Registration:</label></td>
+                    <td>
+                        <input type="text" class="small-input" placeholder="DD"> /
+                        <input type="text" class="small-input" placeholder="MM"> /
+                        <input type="text" class="small-input" placeholder="YYYY">
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Personal Information</h2>
+            <table>
+                <tr>
+                    <td><label>Full Name:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Full Name"></td>
+                    <td><label>Nickname:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Nickname"></td>
+                </tr>
+                <tr>
+                    <td><label>Date of Birth:</label></td>
+                    <td>
+                        <input type="text" class="small-input" placeholder="DD"> /
+                        <input type="text" class="small-input" placeholder="MM"> /
+                        <input type="text" class="small-input" placeholder="YYYY">
+                    </td>
+                    <td><label>Place of Birth:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Place of Birth"></td>
+                </tr>
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="email" class="long-input" placeholder="Email"></td>
+                    <td><label>Nationality:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Nationality"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                    <td><label>Marital Status:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Marital Status"></td>
+                </tr>
+                <tr>
+                    <td><label>Country:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Country"></td>
+                    <td><label>Domicile:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Domicile"></td>
+                </tr>
+                <tr>
+                    <td><label>Phone:</label></td>
+                    <td><input type="text" class="long-input" placeholder="Phone Number"></td>
+                </tr>
+            </table>
+
+            <h2>Address</h2>
+            <table>
+                <tr>
+                    <td><label>Present Address:</label></td>
+                    <td colspan="3"><input type="text" class="long-input" placeholder="Present Address"></td>
+                </tr>
+                <tr>
+                    <td><label>The City:</label></td>
+                    <td><input type="text" class="medium-input" placeholder="City"></td>
+                    <td><label>State:</label></td>
+                    <td><input type="text" class="medium-input" placeholder="State"></td>
+                </tr>
+                <tr>
+                    <td><label>Zip Code:</label></td>
+                    <td><input type="text" class="medium-input" placeholder="Zip Code"></td>
+                </tr>
+            </table>
+
+            <h2>School</h2>
+            <table>
+                <tr>
+                    <td><label>Address:</label></td>
+                    <td colspan="3">
+                        <p>A: 123 Anywhere St, Any City, ST 12345</p>
+                        <p>P: +123-456-7890 E: hello@reallygreatsite.com</p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="signature-section">
+                <tr>
+                    <td><label>Register Signature:</label></td>
+                    <td><input type="text" class="medium-input" placeholder="Signature"></td>
+                    <td><label>Officer Signature:</label></td>
+                    <td><input type="text" class="medium-input" placeholder="Signature"></td>
+                </tr>
+            </table>
+
+            <p class="footer-note">THANK YOU FOR REGISTRATION</p>
+        </form>
+    </div>
+</body>
+</html>
